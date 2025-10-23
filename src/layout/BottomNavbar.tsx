@@ -72,18 +72,8 @@ export const BottomNavbar = () => {
           <Link href="/categories" className={isActive("/categories")}>Categories</Link>
           <Link href="/products" className={isActive("/products")}>Products</Link>
           <Link href="/blog" className={isActive("/blog")}>Blog</Link>
-
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" className={`flex items-center gap-1 ${isActive("/others")}`}>
-                <Clock className="h-4 w-4 mr-1" /> Others <ChevronDown className="h-4 w-4 ml-1" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-40">
-              <DropdownMenuItem><Link href="/about" className={isActive("/about")}>About Us</Link></DropdownMenuItem>
-              <DropdownMenuItem><Link href="/contact" className={isActive("/contact")}>Contact</Link></DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <Link href="/about" className={isActive("/about")}>About Us</Link>
+          <Link href="/contact" className={isActive("/contact")}>Contact</Link>
         </nav>
 
         <div className="hidden md:block">
