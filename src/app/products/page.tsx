@@ -1,11 +1,9 @@
-import CategoryGrid from '@/component/CategoryGrid'
 import ProductListing from '@/component/ProductListing'
 import React from 'react'
 
 const page = () => {
   return (
     <div>
-      <CategoryGrid />
       <ProductListing />
     </div>
   )

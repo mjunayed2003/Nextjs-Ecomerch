@@ -101,9 +101,7 @@ const ProductListing = () => {
     };
 
 
-    // State
     const [sortOption, setSortOption] = useState<string>('featured');
-    // Sorting function
     const getSortedProducts = (products: Product[]) => {
         const sorted = [...products];
         switch (sortOption) {
@@ -114,27 +112,22 @@ const ProductListing = () => {
             case 'name-asc':
                 return sorted.sort((a, b) => a.name.localeCompare(b.name));
             default:
-                return sorted; // featured / default order
+                return sorted;
         }
     }
 
-    // Apply sorting
+    //  sorting
 
     const filteredProducts = getSortedProducts(getFilteredProducts());
 
       const [currentPage, setCurrentPage] = useState<number>(1);
     const totalPages = Math.ceil(filteredProducts.length / PRODUCTS_PER_PAGE);
-    // const currentProducts = filteredProducts.slice(
-    //     (currentPage - 1) * PRODUCTS_PER_PAGE,
-    //     currentPage * PRODUCTS_PER_PAGE
-    // );
 
     return (
         <section className="container mx-auto px-4 py-8">
             <div className="flex flex-col lg:flex-row gap-8">
-                {/* Sidebar */}
                 <aside className="w-full lg:w-1/4 bg-white p-6 rounded-lg shadow-sm border border-gray-200 space-y-8">
-                    {/* Category Filter */}
+
                     <div>
                         <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center justify-between">
                             Category <ChevronDown className="h-4 w-4 text-gray-500" />
@@ -258,9 +251,7 @@ const ProductListing = () => {
                     </div>
                 </aside>
 
-                {/* Right Section - Product Listing */}
                 <main className="w-full lg:w-3/4">
-                    {/* Active Filters and Sort Bar */}
                     <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200 mb-6 flex flex-wrap justify-between items-center gap-3">
                         <div className="flex items-center flex-wrap gap-2">
                             {activeFilters.length > 0 && <span className="text-sm font-medium text-gray-700 mr-2">Filters:</span>}
@@ -278,7 +269,6 @@ const ProductListing = () => {
                         </div>
 
                         <div className="flex items-center gap-4">
-                            {/* Sort */}
                             <div className="flex items-center text-gray-700 text-sm">
                                 <span className="mr-2">Sort by</span>
                                 <Select onValueChange={(value) => setSortOption(value)}>
@@ -294,7 +284,6 @@ const ProductListing = () => {
                                 </Select>
                             </div>
 
-                            {/* View Toggle */}
                             <Button variant="outline" size="icon" className="h-9 w-9 border-gray-300 text-gray-600 hover:bg-gray-100" onClick={() => setIsGrid(true)}>
                                 <LayoutGrid className="h-5 w-5" />
                             </Button>
@@ -304,7 +293,6 @@ const ProductListing = () => {
                         </div>
                     </div>
 
-                    {/* Product Grid/List */}
                     <div className={isGrid ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6' : 'flex flex-col gap-4'}>
                         {filteredProducts.length > 0 ? filteredProducts.map((product) => (
                             <div key={product.id} className={`bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden group hover:shadow-md transition-shadow duration-300 ${!isGrid ? 'flex' : ''}`}>

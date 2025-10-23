@@ -13,6 +13,10 @@ const nextConfig: NextConfig = {
         hostname: 'encrypted-tbn0.gstatic.com',
         pathname: '/**', 
       },
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
     ],
   },
 };

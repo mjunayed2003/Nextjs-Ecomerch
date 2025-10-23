@@ -12,7 +12,6 @@ interface Category {
   hoverBorderClass: string;
 }
 
-// ডাইনামিক ডেটা
 const categories: Category[] = [
   {
     id: 1,

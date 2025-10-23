@@ -83,7 +83,6 @@ const HeroBanner = () => {
                                     transition={{ duration: 1 }}
                                     className="absolute inset-0 w-full h-full"
                                 >
-                                    {/* Background Image */}
                                     <Image
                                         src={slide.image}
                                         alt={slide.title}
@@ -93,10 +92,8 @@ const HeroBanner = () => {
                                         unoptimized
                                     />
 
-                                    {/* Overlay */}
                                     <div className="absolute inset-0 bg-black/40 z-10"></div>
 
-                                    {/* Left Text Content */}
                                     <motion.div
                                         initial={{ opacity: 0, x: -50 }}
                                         animate={{ opacity: 1, x: 0 }}
@@ -117,7 +114,6 @@ const HeroBanner = () => {
                     )}
                 </AnimatePresence>
 
-                {/* Slider Buttons */}
                 <div className="absolute top-1/2 left-4 transform -translate-y-1/2 z-30">
                     <Button variant="outline" size="icon" onClick={prevSlide}>
                         <ChevronLeft className="h-6 w-6 text-black font-bold" />
@@ -131,7 +127,6 @@ const HeroBanner = () => {
 
 
 
-                {/* Slider Dots */}
                 <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-2 z-20">
                     {slides.map((_, idx) => (
                         <span

@@ -12,7 +12,6 @@ const Footer: React.FC = () => {
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-12">
 
-                    {/* Column 1: Logo and Description */}
                     <div className="lg:col-span-2">
                         <Link href="/" className="inline-block mb-4 relative w-28 h-8">
                             <span className="text-2xl font-bold text-green-600 flex items-center">
@@ -51,7 +50,6 @@ const Footer: React.FC = () => {
 
                     </div>
 
-                    {/* Column 2: Category */}
                     <div>
                         <h3 className="text-base font-semibold text-gray-800 mb-5">Category</h3>
                         <ul className="space-y-3 text-sm">
@@ -63,7 +61,6 @@ const Footer: React.FC = () => {
                         </ul>
                     </div>
 
-                    {/* Column 3: Company */}
                     <div>
                         <h3 className="text-base font-semibold text-gray-800 mb-5">Company</h3>
                         <ul className="space-y-3 text-sm">
@@ -75,7 +72,6 @@ const Footer: React.FC = () => {
                         </ul>
                     </div>
 
-                    {/* Column 4: Account */}
                     <div>
                         <h3 className="text-base font-semibold text-gray-800 mb-5">Account</h3>
                         <ul className="space-y-3 text-sm">
@@ -87,7 +83,6 @@ const Footer: React.FC = () => {
                         </ul>
                     </div>
 
-                    {/* Column 5: Contact */}
                     <div>
                         <h3 className="text-base font-semibold text-gray-800 mb-5">Contact</h3>
                         <div className="space-y-4 text-sm">
@@ -114,7 +109,6 @@ const Footer: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Bottom Bar */}
                 <div className="mt-16 pt-6 border-t border-gray-200 flex flex-col md:flex-row items-center justify-between text-xs text-gray-500">
                     <p className="mb-4 md:mb-0">
                         Copyright &copy; <Link href="/" className="hover:text-green-600 transition-colors">Grabit.zill</Link> all rights reserved. Powered by Grabit.
@@ -132,7 +126,6 @@ const Footer: React.FC = () => {
                 </div>
             </div>
 
-            {/* Scroll to Top */}
             <Button
                 variant="default"
                 size="icon"
